@@ -7,4 +7,5 @@
  * Proprietary and confidential.
  */
 
-export * from "./Gateway/";
+export class StorageException extends Error{
+}

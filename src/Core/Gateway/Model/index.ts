@@ -6,5 +6,7 @@
  *
  * Proprietary and confidential.
  */
-
-export * from "./Gateway/";
+export * from "./IGatewayTradeModel";
+export * from "./GatewayTakerSide";
+export * from "./IGatewayOrderBookModel";
+export * from "./IGatewayCandleModel";

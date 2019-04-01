@@ -7,4 +7,5 @@
  * Proprietary and confidential.
  */
 
-export * from "./Gateway/";
+import * as Exception from "./";
+export class CreateStorageException extends Exception.StorageException {}

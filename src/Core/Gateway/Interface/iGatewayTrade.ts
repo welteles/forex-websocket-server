@@ -6,5 +6,7 @@
  *
  * Proprietary and confidential.
  */
-
-export * from "./Gateway/";
+import * as Core from "../../index";
+export interface IGatewayTrade {
+    getTrades(market: string[]): Array<Promise<Core.IGatewayTradeModel>>;
+}

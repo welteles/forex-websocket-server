@@ -7,4 +7,8 @@
  * Proprietary and confidential.
  */
 
-export * from "./Gateway/";
+import * as Transport from "../";
+
+export class MongoDBTransport implements Transport.ITransport{
+    
+}

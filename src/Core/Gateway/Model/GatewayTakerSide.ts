@@ -6,5 +6,17 @@
  *
  * Proprietary and confidential.
  */
+/**
+ * Taker side.
+ */
+export enum GatewayTakerSide {
+    /**
+     * Sell side.
+     */
+    SELL = "SELL",
 
-export * from "./Gateway/";
+    /**
+     * Buy side.
+     */
+    BUY = "BUY"
+}

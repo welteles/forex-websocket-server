@@ -7,39 +7,37 @@
  * Proprietary and confidential.
  */
 
-import {AxiosInstance} from "axios";
+import { AxiosInstance } from "axios";
 
-export interface HttpConnectionInterface {
+/**
+ * Http connection client.
+ */
+export interface IGatewayHttpConnection {
     /**
      * The key of this client.
      */
-    key: string;
+    readonly key: string;
 
     /**
      * The secret of this client.
      */
-    secret: string;
+    readonly secret: string;
 
     /**
      * The public API url.
      */
-    publicURL: string;
+    readonly publicURL: string;
 
     /**
      * The private API url.
      */
-    privateURL: string;
+    readonly privateURL: string;
 
     /**
      * The underlying connection
      * used for communication.
      */
-    connection: AxiosInstance;
-
-    /**
-     * The Connection interface.
-     */
-    constructor(key: string, secret: string): void;
+    readonly connection: AxiosInstance;
 
     /**
      * Makes a public api request and returns the response.

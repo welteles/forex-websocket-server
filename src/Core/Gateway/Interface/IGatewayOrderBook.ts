@@ -6,5 +6,7 @@
  *
  * Proprietary and confidential.
  */
-
-export * from "./Gateway/";
+import * as Core from "../../index";
+export interface IGatewayOrderBook {
+    getOrderBook(market: string[], depth: number): Core.IGatewayOrderBook;
+}

@@ -6,3 +6,4 @@
  *
  * Proprietary and confidential.
  */
+export * from "./BitfinexTrade";

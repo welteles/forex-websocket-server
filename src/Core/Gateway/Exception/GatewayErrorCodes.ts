@@ -7,4 +7,6 @@
  * Proprietary and confidential.
  */
 
-export * from "./Gateway/";
+export enum GatewayErrorCodes {
+    RATE_LIMIT_ERROR = "RATE_LIMIT_ERROR"
+}

@@ -6,5 +6,4 @@
  *
  * Proprietary and confidential.
  */
-
-export * from "./Gateway/";
+export class GatewayException extends Error {}

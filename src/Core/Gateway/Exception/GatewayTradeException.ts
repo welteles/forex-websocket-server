@@ -6,5 +6,6 @@
  *
  * Proprietary and confidential.
  */
+import * as Core from "../../index";
 
-export * from "./Gateway/";
+export class GatewayTradeException extends Core.GatewayException {}

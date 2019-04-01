@@ -7,4 +7,8 @@
  * Proprietary and confidential.
  */
 
-export * from "./Gateway/";
+import * as Transport from "../";
+
+export class CassandraTransport implements Transport.ITransport{
+    
+}

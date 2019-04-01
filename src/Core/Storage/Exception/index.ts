@@ -6,5 +6,5 @@
  *
  * Proprietary and confidential.
  */
-
-export * from "./Gateway/";
+export * from "./CreateStorageException";
+export * from "./StorageException";
