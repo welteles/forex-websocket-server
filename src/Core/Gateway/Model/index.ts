@@ -8,5 +8,7 @@
  */
 export * from "./IGatewayTradeModel";
 export * from "./GatewayTakerSide";
+export * from "./GatewayMethod";
+export * from "./GatewayTypeRequest";
 export * from "./IGatewayOrderBookModel";
 export * from "./IGatewayCandleModel";

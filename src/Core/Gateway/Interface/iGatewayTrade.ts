@@ -6,7 +6,15 @@
  *
  * Proprietary and confidential.
  */
-import * as Core from "../../index";
+import * as Gateway from "./../";
 export interface IGatewayTrade {
-    getTrades(market: string[]): Array<Promise<Core.IGatewayTradeModel>>;
+    /**
+     *
+     */
+    request: Gateway.IGatewayRequestHTTP | Gateway.IGatewayRequestWebSocket;
+    /**
+     *
+     * @param market
+     */
+    getTrades(market?: string[]): Array<Promise<Gateway.IGatewayTradeModel>>;
 }

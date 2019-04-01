@@ -9,6 +9,9 @@
 import * as Core from "../../Core";
 
 export class HuobiTrade implements Core.IGatewayTrade {
+    request: Core.IGatewayRequestHTTP  = {
+        endPoint: "trades"
+    };
     public getTrades(
         market: string[]
     ): Array<Promise<Core.IGatewayTradeModel>> {

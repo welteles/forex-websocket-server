@@ -13,3 +13,5 @@ export * from "./IGatewayHttpConnection";
 export * from "./IGatewayCandle";
 export * from "./IGateway";
 export * from "./IGatewayWebSocketConnection";
+export * from "./IGatewayRequestHTTP";
+export * from "./IGatewayRequestWebSocket";
