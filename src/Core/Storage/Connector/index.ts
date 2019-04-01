@@ -7,4 +7,5 @@
  * Proprietary and confidential.
  */
 
-export class StorageException extends Error {}
+export * from "./Interface";
+export * from "./Connector";

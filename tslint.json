@@ -4,7 +4,7 @@
         "tslint-config-prettier"
     ],
     "rules": {
-        "object-literal-sort-keys": true,
+        "object-literal-sort-keys": false,
         "no-console": false,
         "no-empty-interface": true,
         "variable-name": [true, "ban-keywords", "check-format", "allow-leading-underscore", "allow-snake-case"]

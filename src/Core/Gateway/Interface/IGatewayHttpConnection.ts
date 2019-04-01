@@ -16,12 +16,12 @@ export interface IGatewayHttpConnection {
     /**
      * The key of this client.
      */
-    readonly key: string;
+    readonly key?: string;
 
     /**
      * The secret of this client.
      */
-    readonly secret: string;
+    readonly secret?: string;
 
     /**
      * The public API url.

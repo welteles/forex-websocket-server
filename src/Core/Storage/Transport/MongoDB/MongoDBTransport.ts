@@ -9,6 +9,4 @@
 
 import * as Transport from "../";
 
-export class MongoDBTransport implements Transport.ITransport{
-    
-}
+export class MongoDBTransport implements Transport.ITransport {}

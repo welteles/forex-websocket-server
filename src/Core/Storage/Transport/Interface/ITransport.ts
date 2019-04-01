@@ -7,8 +7,13 @@
  * Proprietary and confidential.
  */
 
-export interface ITransport {
+import * as Storage from "./../../";
 
+export interface ITransport {
+    /**
+     *
+     */
+    connector: Storage.IConnector;
     /**
      *
      * @param data

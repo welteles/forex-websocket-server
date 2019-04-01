@@ -6,5 +6,8 @@
  *
  * Proprietary and confidential.
  */
-
-export class StorageException extends Error {}
+export * from "./HuobiTrade";
+export * from "./HuobiHttpConnection";
+export * from "./HuobiGateway";
+export * from "./HuobiOrderBook";
+export * from "./HuobiCandle";

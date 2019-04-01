@@ -9,6 +9,4 @@
 
 import * as Transport from "../";
 
-export class CassandraTransport implements Transport.ITransport{
-    
-}
+export class CassandraTransport implements Transport.ITransport {}

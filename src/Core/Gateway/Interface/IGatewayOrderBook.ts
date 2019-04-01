@@ -8,5 +8,5 @@
  */
 import * as Core from "../../index";
 export interface IGatewayOrderBook {
-    getOrderBook(market: string[], depth: number): Core.IGatewayOrderBook;
+    getOrderBook(market: string[], depth: number): Promise<Core.IGatewayOrderBookModel>[];
 }

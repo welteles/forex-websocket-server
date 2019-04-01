@@ -7,10 +7,10 @@
  * Proprietary and confidential.
  */
 
-import * as Gateway from "../";
 import * as Core from "../../Core";
+import * as Gateway from "../index";
 
-export class BitfinexGateway implements Core.ItiGateway {
+export class BitfinexGateway implements Core.IGateway {
     public readonly candle: Core.IGatewayCandle;
     public readonly connection:
         | Core.IGatewayHttpConnection

@@ -8,3 +8,4 @@
  */
 
 export * from "./Gateway/";
+export * from "./Storage/";
