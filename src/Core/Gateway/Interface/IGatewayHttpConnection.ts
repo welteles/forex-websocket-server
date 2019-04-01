@@ -7,7 +7,7 @@
  * Proprietary and confidential.
  */
 
-import { AxiosInstance } from "axios";
+import {AxiosInstance, AxiosRequestConfig} from "axios";
 
 /**
  * Http connection client.
@@ -31,7 +31,7 @@ export interface IGatewayHttpConnection {
     /**
      * The private API url.
      */
-    readonly privateURL: string;
+    readonly privateURL?: string;
 
     /**
      * The underlying connection
@@ -42,7 +42,7 @@ export interface IGatewayHttpConnection {
     /**
      * Makes a public api request and returns the response.
      */
-    publicRequest(): Promise<any>;
+    publicRequest(options: AxiosRequestConfig): Promise<any>;
 
     /**
      * Makes a private api request and returns the response.

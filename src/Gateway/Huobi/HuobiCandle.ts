@@ -9,6 +9,10 @@
 import * as Core from "../../Core";
 
 export class HuobiCandle implements Core.IGatewayCandle {
+    request: Core.IGatewayRequestHTTP  = {
+        endPoint: "trades"
+    };
+
     getCandles(market: string[]): Array<Promise<Core.IGatewayCandleModel>> {
         return [];
     }

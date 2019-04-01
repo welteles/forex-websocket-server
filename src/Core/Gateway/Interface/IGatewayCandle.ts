@@ -7,7 +7,17 @@
  * Proprietary and confidential.
  */
 
-import * as Core from "../../index";
+import * as Gateway from "../../";
+
 export interface IGatewayCandle {
-    getCandles(market: string[]): Array<Promise<Core.IGatewayCandleModel>>;
+    /**
+     *
+     */
+    request: Gateway.IGatewayRequestHTTP | Gateway.IGatewayRequestWebSocket;
+
+    /**
+     *
+     * @param market
+     */
+    getCandles(market: string[]): Array<Promise<Gateway.IGatewayCandleModel>>;
 }

@@ -9,6 +9,9 @@
 import * as Core from "../../Core";
 
 export class HuobiOrderBook implements Core.IGatewayOrderBook{
+    request: Core.IGatewayRequestHTTP  = {
+        endPoint: "orderbook"
+    };
     getOrderBook(market: string[], depth: number): Promise<Core.IGatewayOrderBookModel>[] {
         return [];
     }

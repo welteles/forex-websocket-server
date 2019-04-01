@@ -6,7 +6,17 @@
  *
  * Proprietary and confidential.
  */
-import * as Core from "../../index";
+import * as Gateway from "../../";
 export interface IGatewayOrderBook {
-    getOrderBook(market: string[], depth: number): Promise<Core.IGatewayOrderBookModel>[];
+    /**
+     *
+     */
+    request: Gateway.IGatewayRequestHTTP | Gateway.IGatewayRequestWebSocket;
+
+    /**
+     *
+     * @param market
+     * @param depth
+     */
+    getOrderBook(market: string[], depth: number): Promise<Gateway.IGatewayOrderBookModel>[];
 }

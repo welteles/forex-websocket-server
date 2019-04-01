@@ -11,9 +11,7 @@ import * as Core from "../../Core";
 import * as Gateway from "./";
 
 export class HuobiGateway implements Core.IGateway {
-    public readonly connection:
-        | Core.IGatewayHttpConnection
-        | Core.IGatewayWebSocketConnection = new Gateway.HuobiHttpConnection();
+    public readonly connection: Core.IGatewayHttpConnection = new Gateway.HuobiHttpConnection();
     public readonly candle: Core.IGatewayCandle = new Gateway.HuobiCandle();
     public readonly orderBook: Core.IGatewayOrderBook = new Gateway.HuobiOrderBook();
     public readonly trade: Core.IGatewayTrade = new Gateway.HuobiTrade();
