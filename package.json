@@ -1,7 +1,7 @@
 {
-  "name": "cryptodata-gateway",
+  "name": "forex-websocket-server",
   "version": "1.0.0",
-  "description": "Connect on exchanges and capture data.",
+  "description": "Multi client forex websocket server.",
   "main": "index.js",
   "directories": {
     "test": "tests"
@@ -9,22 +9,22 @@
   "scripts": {
     "clean": "rimraf dist && rimraf coverage && rimraf .nyc_output && rimraf dist_test",
     "format": "prettier --write '{src,src_prototype,test}/**/*.ts' && tslint --force --fix --format verbose 'src/**/*.ts'",
-    "build": "npm run format && npm run clean && tsc -p tsconfig.build.json --pretty",
-    "build-test": "npm run format && npm run clean && tsc -p tsconfig.json --pretty",
-    "test": "npm run build-test && ava"
+    "build": "npm run clean && tsc -p tsconfig.build.json --pretty",
+    "build-test": "npm run clean && tsc -p tsconfig.json --pretty",
+    "test": "npm run build-test && ava",
+    "exchange-rate-api": "npm run build && node dist/src/bin/ExchangeRateApiCommand.js"
   },
   "dependencies": {
     "@raphaabreu/parser": "^1.0.2",
-    "@raphaabreu/precision-math": "^1.0.2",
     "@types/node": "^11.9.4",
+    "@types/request": "^2.48.1",
+    "@types/ws": "^6.0.1",
     "ava": "^1.2.1",
     "axios": "^0.18.0",
-    "bottleneck": "^1.16.0",
-    "fs": "0.0.1-security",
-    "mathjs": "^5.4.2",
-    "mongodb": "^3.1.13",
+    "bottleneck": "^2.18.0",
+    "request": "^2.88.0",
     "winston": "^3.2.1",
-    "winston-daily-rotate-file": "^3.8.0"
+    "ws": "^6.2.1"
   },
   "devDependencies": {
     "babel-register": "^6.26.0",
@@ -33,6 +33,16 @@
     "tslint": "^5.12.1",
     "tslint-config-prettier": "^1.18.0",
     "typescript": "^3.3.3"
+  },
+  "ava": {
+    "concurrency": 8,
+    "verbose": true,
+    "files": [
+      "./dist_test/**/*-spec.js"
+    ],
+    "require": [
+      "babel-register"
+    ]
   },
   "author": "Wellington Rocha",
   "license": "ISC"
