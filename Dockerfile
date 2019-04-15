@@ -1,8 +1,8 @@
-FROM node:lastest
-MAINTAINER Wellington Rocha <wellington.rocha@atlasproj.com>
+FROM node:latest
+MAINTAINER Wellington Rocha <c-s-w@hotmail.com>
 RUN mkdir -p /app
 COPY package.json /app/
 WORKDIR /app
 RUN npm i
 COPY . /app
-RUN npm run build
+ENTRYPOINT npm run exchange-rate-api
