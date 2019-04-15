@@ -18,6 +18,7 @@ export class ExchangeRateApiServer extends Core.WebSocketServer
      * Stream service.
      */
     public streamService(base?: string): void {
+        Core.Logger.transport().info("Exchange rate api server start");
         this.webSocketServer.on("connection", ws =>
             new Core.ExchangeRateApiService(ws).getCurrencyRates(base).then()
         );

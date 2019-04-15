@@ -8,14 +8,15 @@
  */
 
 /**
- *
+ * Request Exception.
  */
 export class RequestException extends Error {
     /**
+     * Message.
      *
      * @param message
      */
     public constructor(message: string) {
-        super(message);
+        super(`Request exception.  ${message}`);
     }
 }

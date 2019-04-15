@@ -1,7 +1,7 @@
 {
   "name": "forex-websocket-server",
   "version": "1.0.0",
-  "description": "Multi client forex websocket server.",
+  "description": "Forex WebSocket server.",
   "main": "index.js",
   "directories": {
     "test": "tests"

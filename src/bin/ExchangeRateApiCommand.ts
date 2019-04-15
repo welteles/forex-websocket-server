@@ -8,4 +8,4 @@
  */
 
 import { ExchangeRateApiServer } from "../lib/Core/Client/ExchangeRateApi";
-new ExchangeRateApiServer().streamService();
+new ExchangeRateApiServer(process.env.PORT).streamService();
